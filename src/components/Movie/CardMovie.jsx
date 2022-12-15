@@ -7,10 +7,7 @@ export const CardMovie = ({ movie }) => {
 
 
     return (
-        <Grid
-            item xs={6}
-            sm={3}
-        >
+        <Grid sx={{ mr:3 }}>
             <Link>
                 <Card>
                     <CardActionArea>
@@ -18,7 +15,7 @@ export const CardMovie = ({ movie }) => {
                             component='img'
                             image={ image }
                             // image={'https://media.vandal.net/m/9-2022/2022991163975_1.jpg.webp'}
-                            alt={'Black Adam'}
+                            alt={ movie.title }
                             sx={{ transition: 'all .3s ease-in-out ' }}
                         />
                     </CardActionArea>
