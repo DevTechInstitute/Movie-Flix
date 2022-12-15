@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <Layout>
-      <Banner />
+      <Banner movie={ nowPlaying[0] }/>
       <ListadoMovies movies={nowPlaying} title={'Ultimas añadidas'} icon={ <TrendingUpOutlined/> }/>
       <ListadoMovies movies={nowPlaying} title={'Top 10 en Bolivia'} icon={ <AssessmentOutlined/> }/>
       <ListadoMovies movies={nowPlaying} title={'Categoria Horror'} icon={ <CategoryOutlined/> }/>

@@ -1,5 +1,5 @@
-import { SearchOutlined } from '@mui/icons-material'
-import { AppBar, Box, Button, IconButton, Link, List, ListItem, Toolbar, Typography } from '@mui/material'
+import { SearchOutlined, Visibility, VisibilityOff } from '@mui/icons-material'
+import { AppBar, Box, Button, FormControl, IconButton, InputAdornment, InputLabel, Link, List, ListItem, OutlinedInput, TextField, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 
 export const Navbar = () => {
@@ -10,10 +10,10 @@ export const Navbar = () => {
                     <Typography variant='h1' component='h1' color='#E50914'>MovieFlix</Typography>
                 </Box>
 
-                <Box sx={{ flex:1 }}></Box>
+                <Box sx={{ flex: 1 }}></Box>
 
                 <Box>
-                    <List sx={{ display:'flex' }} >
+                    <List sx={{ display: 'flex' }} >
                         <ListItem>
                             <Link>Home</Link>
                         </ListItem>
@@ -31,11 +31,26 @@ export const Navbar = () => {
                         <ListItem>
                             <Link>Account</Link>
                         </ListItem>
-                        <IconButton>
-                            <SearchOutlined/>
-                        </IconButton>
                     </List>
                 </Box>
+                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+                    <InputLabel htmlFor="outlined-adornment-password">Buscar</InputLabel>
+                    <OutlinedInput
+                        id="outlined-adornment-password"
+                        type='text'
+                        endAdornment={
+                            <InputAdornment position="end">
+                                <IconButton
+                                    aria-label="toggle password visibility"
+                                    edge="end"
+                                >
+                                    <SearchOutlined/>
+                                </IconButton>
+                            </InputAdornment>
+                        }
+                        label="Buscar"
+                    />
+                </FormControl>
             </Toolbar>
         </AppBar>
     )

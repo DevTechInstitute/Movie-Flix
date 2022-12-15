@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardMedia, Grid, Link, Typography } from '@mui/material'
+import { Box, Card, CardActionArea, CardMedia, Grid, Link, Rating, Typography } from '@mui/material'
 import React from 'react'
 
 export const CardMovie = ({ movie }) => {
@@ -23,7 +23,9 @@ export const CardMovie = ({ movie }) => {
             </Link>
             <Box sx={{ mt: 1 }} className='fadeIn'>
                 <Typography fontWeight={700}>{ movie.title }</Typography>
-                <Typography fontWeight={600}>Calificacion: { movie.vote_average }</Typography>
+                {/* <Typography fontWeight={600}>Calificacion: { movie.vote_average }</Typography>
+                 */}
+                 <Rating name="read-only" value={movie.vote_average * 0.5 } readOnly />
             </Box>
 
         </Grid>
