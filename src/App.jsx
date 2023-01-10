@@ -1,6 +1,6 @@
 import { useMovies } from "./hooks/useMovies";
 import { Layout } from "./components/ui";
-import { Banner, CarouselMovies, ListadoMovies } from "./components/Movie";
+import { Banner, CarouselMovies } from "./components/Movie";
 
 import { Container, Typography } from "@mui/material";
 import { AssessmentOutlined, CategoryOutlined, TrendingUpOutlined } from "@mui/icons-material";
