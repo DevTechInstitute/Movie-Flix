@@ -1,10 +1,9 @@
-import { AssessmentOutlined, CategoryOutlined, TrendingUpOutlined } from "@mui/icons-material";
-import { Typography } from "@mui/material";
-import React from "react";
-import { Banner } from "./components/Movie/Banner";
-import { ListadoMovies } from "./components/Movie/ListadoMovies";
-import { Layout } from "./components/ui";
 import { useMovies } from "./hooks/useMovies";
+import { Layout } from "./components/ui";
+import { Banner, CarouselMovies, ListadoMovies } from "./components/Movie";
+
+import { Container, Typography } from "@mui/material";
+import { AssessmentOutlined, CategoryOutlined, TrendingUpOutlined } from "@mui/icons-material";
 
 const App = () => {
   const { nowPlaying, isLoading } = useMovies();
@@ -20,9 +19,11 @@ const App = () => {
   return (
     <Layout>
       <Banner movie={ nowPlaying[0] }/>
-      <ListadoMovies movies={nowPlaying} title={'Ultimas añadidas'} icon={ <TrendingUpOutlined/> }/>
-      <ListadoMovies movies={nowPlaying} title={'Top 10 en Bolivia'} icon={ <AssessmentOutlined/> }/>
-      <ListadoMovies movies={nowPlaying} title={'Categoria Horror'} icon={ <CategoryOutlined/> }/>
+      <Container maxWidth='xl'>
+        <CarouselMovies movies={nowPlaying} title={ 'Ultimas agregadas' }/>
+        <CarouselMovies movies={nowPlaying} title={ 'Top 10 en Bolivia' }/>
+        <CarouselMovies movies={nowPlaying} title={ 'Categoria de Horror' }/>
+      </Container>
     </Layout>
   );
 };

@@ -6,9 +6,6 @@ import Slider from 'react-slick'
 
 
 export const ListadoMovies = ({ title, icon, movies }) => {
-
-
-
     const settings = {
         dots: true,
         infinite: false,
@@ -21,19 +18,15 @@ export const ListadoMovies = ({ title, icon, movies }) => {
             <Typography variant='h3' sx={{ display:'flex', gap:1, alignItems:'center', mb:2 }}>
                 { icon } { title }
             </Typography>
-
-
             <Slider {...settings}>
             {
-                    movies.map( (movie, index) => 
-                        <CardMovie
-                            key={ index }
-                            movie={ movie }
-                        />
-                    )
-                }
+                movies.map( (movie, index) => 
+                    <CardMovie
+                        key={ index }
+                        movie={ movie }
+                    />                    )
+            }
             </Slider>
-
         </Container>
     )
 }

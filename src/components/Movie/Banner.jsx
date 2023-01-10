@@ -9,9 +9,9 @@ export const Banner = ({ movie }) => {
     return (
         <Box 
             sx={{
-                minHeight:'70vh',
-                backgroundImage:`linear-gradient(10deg,   rgba(0, 0, 0, 1) 10% , rgba(0, 0, 0, 0.4)), url(${ image })`,
-                backgroundPosition:'center',
+                minHeight:'90vh',
+                backgroundImage:`linear-gradient(05deg, rgba(0, 0, 0, 1) 10% , rgba(0, 0, 0, 0.3)), url(${ image })`,
+                backgroundPosition:'center center',
                 backgroundRepeat:'no-repeat',
                 backgroundSize:'cover',
                 display: 'flex',

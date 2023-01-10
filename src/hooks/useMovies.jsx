@@ -3,7 +3,7 @@ import movieDb from "../api/movieDb"
 
 export const useMovies = () => {
 
-    const [nowPlaying, setNowPlaying] = useState([]) 
+    const [nowPlaying, setNowPlaying] = useState([])
     const [isLoading, setIsLoading] = useState(true)
 
     const getMovies = async () => {
